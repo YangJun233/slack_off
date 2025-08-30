@@ -13,7 +13,7 @@ running = True
 
 def move_mouse():
     global running
-    print("程序开始运行，在系统托盘可以退出。")
+    # print("程序开始运行，在系统托盘可以退出。")
 
     last_big_move = time.time()
     big_interval = 60 + random.randint(0, 30)
@@ -27,7 +27,7 @@ def move_mouse():
             big_x = random.randint(0, screen_width - 1)
             big_y = random.randint(0, screen_height - 1)
             pyautogui.moveTo(big_x, big_y, duration=0.5)
-            print(f"[{time.strftime('%H:%M:%S')}] 执行大范围随机移动，间隔 {big_interval} 秒")
+            # print(f"[{time.strftime('%H:%M:%S')}] 执行大范围随机移动，间隔 {big_interval} 秒")
             
             last_big_move = time.time()
             big_interval = 60 + random.randint(0, 30)
@@ -39,10 +39,10 @@ def move_mouse():
 
             # 小范围移动等待：5 秒 + 0~5 秒
             small_interval = 5 + random.randint(0, 5)
-            print(f"[{time.strftime('%H:%M:%S')}] 小范围移动，等待 {small_interval} 秒")
+            # print(f"[{time.strftime('%H:%M:%S')}] 小范围移动，等待 {small_interval} 秒")
             time.sleep(small_interval)
 
-    print("程序已退出。")
+    # print("程序已退出。")
 
 # -------------------
 # 托盘图标逻辑
